@@ -1,0 +1,22 @@
+@extends('dashboard')
+
+@section('content')
+
+<table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">ID</th>
+        <td>{{$user->id}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Name</th>
+        <td>{{$user->name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td>{{$user->email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+@endsection

@@ -13,7 +13,8 @@
             @foreach ($list as $key => $user)
                 <tr>
                     <th scope="row">{{$user->id}}</th>
-                    <td><a href="#">{{$user->name}}</a></td>
+                    
+                    <td><a href="{{ route('show-detail', ['id'=>$user->id])}}">{{$user->name}}</a></td>
                     <td>{{$user->email}}</td>
                 </tr>
             @endforeach

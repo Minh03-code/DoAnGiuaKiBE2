@@ -66,9 +66,9 @@ class CustomAuthController extends Controller
         return view("auth.showlist", ["list"=>$list]);
     }
 
-    public function getUserByID(){
-        $user = User::get()->find()->id;
-        return view("auth.showlist", ["user"=>$user]);
+    public function getUserByID(Request $request){
+        $user = User::get()->find($request->id);
+        return view("auth.detail", ["user"=>$user]);
     }
     
     public function dashboard()

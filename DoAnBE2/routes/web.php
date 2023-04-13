@@ -10,3 +10,4 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 Route::get('show', [CustomAuthController::class, 'getListUsersByPage'])->name('show');
+Route::get('show-detail', [CustomAuthController::class, 'getUserByID'])->name('show-detail');
