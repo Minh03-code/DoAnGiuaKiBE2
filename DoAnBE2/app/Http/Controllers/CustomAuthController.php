@@ -45,11 +45,12 @@ class CustomAuthController extends Controller
         ]);
 
         $image = $request->file('image');
-        $storedPath = $image->move('images', $image->getClientOriginalName());
+        $folderPath = 'images/'.$_FILES['image']['name'];
+        $image->move('images', $image->getClientOriginalName());
 
         
         $data = $request->all();
-        $data['image']=$storedPath;
+        $data['image']=$folderPath;
        
         $check = $this->create($data);
 
